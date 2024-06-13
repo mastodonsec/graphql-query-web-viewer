@@ -9,14 +9,24 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     url = 'https://api.github.com/graphql'
-    headers = {'Authorization': 'BearerBEARER_TOKEN'}
+    headers = {'Authorization': 'Bearer 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'}
     query = """
     query {
       repository(owner: "im-sandbox-tamb", name: "ghas-copilot-labs") {
         vulnerabilityAlerts(first: 100) {
           nodes {
             securityVulnerability {
+                package {
+                    name
+                }
               severity
+              advisory {
+                description
+                identifiers {
+                    type
+                    value
+                }   
+              }
             }
           }
         }
