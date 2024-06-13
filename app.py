@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     url = 'https://api.github.com/graphql'
-    headers = {'Authorization': 'Bearer YOUR_GITHUB_TOKEN'}
+    headers = {'Authorization': 'BearerBEARER_TOKEN'}
     query = """
     query {
       repository(owner: "im-sandbox-tamb", name: "ghas-copilot-labs") {

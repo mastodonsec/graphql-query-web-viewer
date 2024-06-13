@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependabot Alerts</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+    var graphs = {{ graphJSON | safe }};
+    Plotly.newPlot('chart', graphs);
+    </script>
+</body>
+</html>
