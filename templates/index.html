@@ -8,7 +8,9 @@
     <div id="chart"></div>
     <script>
     var graphs = {{ graphJSON | safe }};
-    Plotly.newPlot('chart', graphs);
+    Plotly.newPlot('chart', graphs).then(() => {
+        // Property assignment or method call here
+    });
     </script>
 </body>
 </html>
