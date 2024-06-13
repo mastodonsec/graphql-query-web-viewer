@@ -3,13 +3,15 @@ import requests
 import plotly
 import plotly.graph_objs as go
 import json
+import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     url = 'https://api.github.com/graphql'
-    headers = {'Authorization': 'BEARER_TOKEN'}}
+    bearer_token = os.environ['BEARER_TOKEN'] #setup your bearer token as an environment variable
+    headers =  {'Authorization': f'Bearer {bearer_token}'}
     query = """
     query {
       repository(owner: "im-sandbox-tamb", name: "ghas-copilot-labs") {
@@ -44,7 +46,7 @@ def index():
             counts[severity] = 0
         counts[severity] += 1
 
-    # Create a bar chart with Plotly
+    # Create a bar chart with Plotly with x as the severity levels and y as the counts
     data = [go.Bar(x=list(counts.keys()), y=list(counts.values()))]
     graphJSON = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
 
