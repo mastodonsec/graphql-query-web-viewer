@@ -6,6 +6,7 @@
 ### For the bearer token, you will need the following scopes:
 - **repo** repo:status, public_repo, security_events
 - **admin:org** read:org
+
 ![alt text](image.png)
 
 ## Application SETUP
