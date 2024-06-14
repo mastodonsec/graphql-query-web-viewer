@@ -1,4 +1,4 @@
-# graphql-query-web-viewer
+# GraphQL-Query-Web-Viewer
 ## A PoC Python Web application using Flask to view a GraphQL API query .json output as chart using the Plotly Python library 
 ### This code use the .env file to store the bearer token, remember to create this file and add it to your local .gitgnore to avoid exponsing the secret. 
 
