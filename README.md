@@ -10,6 +10,8 @@
 ![alt text](image.png)
 
 ## Application SETUP
+> [!NOTE]
+> If you have already a Python dev environment setup with the ```dotenv``` library, skip installing ```dotenv``` again.
 
 1. Install Flask, Plotly, Requests and Dotenv libraries: ``` pip install flask requests plotly python_dotenv ```
 2. Set the Flask environment (FLASK_APP): ``` set FLASK_APP=app ```
