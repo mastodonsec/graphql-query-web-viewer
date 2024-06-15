@@ -37,8 +37,8 @@ def index():
     """
     response = requests.post(url, headers=headers, json={'query': query})
     data = response.json()
-    print(data) # for debugging purposes
-    print(response.status_code) # for debugging purposes
+    #print(data) # for debugging purposes
+    #print(response.status_code) # for debugging purposes
 
     # Count the number of alerts for each severity level
     counts = {}
