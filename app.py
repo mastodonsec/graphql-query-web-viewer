@@ -13,8 +13,9 @@ def index():
     bearer_token = os.environ['BEARER_TOKEN'] #setup your bearer token as an environment variable
     headers =  {'Authorization': f'Bearer {bearer_token}'}
     query = """
+    #Replace ORG_NAME and REPO_NAME with your organization and repository you want to run the query against it.
     query {
-      repository(owner: "im-sandbox-tamb", name: "ghas-copilot-labs") {
+      repository(owner: "ORG_NAME", name: "REPO_NAME") { 
         vulnerabilityAlerts(first: 100) {
           nodes {
             securityVulnerability {
